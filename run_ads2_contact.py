@@ -69,7 +69,7 @@ class HNet(nn.Module):
     """
     Network representing the crossing-symmetric remainder H(z).
 
-    The pre-factor (z^3 log(z) + log(1-z)) encodes the expected analytic
+    The pre-factor (z^3 log(z) + z^3 log(1-z)) encodes the expected analytic
     structure, leaving a smooth function for the network to learn.
     """
 
@@ -85,7 +85,7 @@ class HNet(nn.Module):
 
     def forward(self, z):
         zc = torch.clamp(z, min=EPS)
-        return (zc**3 * torch.log(zc) + torch.log(1 - zc)) * self.net(z)
+        return (zc**3 * torch.log(zc) + zc**3 * torch.log(1 - zc)) * self.net(z)
 
 
 # ---------------------------------------------------------------------------
