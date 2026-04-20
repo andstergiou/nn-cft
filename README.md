@@ -137,3 +137,7 @@ results_*/
 The figure shows all individual runs as thin lines, the ensemble mean with
 a ±1σ band, the exact or bootstrap reference, and the relative error of the
 mean normalised by |G(z)| + 1.
+
+## License
+
+Released under the [MIT License](https://opensource.org/licenses/MIT).
