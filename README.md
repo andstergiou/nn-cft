@@ -1,8 +1,17 @@
 # Neural Network Bootstrap for CFT Correlation Functions
 
 This repository contains standalone Python scripts demonstrating a neural
-network approach to the reconstruction of conformal correlators. Each
-script trains a small ensemble of networks to learn the four-point
+network approach to the reconstruction of conformal correlators as
+described in
+> **Neural Networks Reveal a Universal Bias in Conformal Correlators**  
+> Kausik Ghosh, Sidhaarth Kumar, Vasilis Niarchos, and Andreas Stergiou (2026)  
+> [arXiv:2604.18673](https://arxiv.org/abs/2604.18673)
+
+> **Neural Spectral Bias and Conformal Correlators I: Introduction and Applications**  
+> Kausik Ghosh, Sidhaarth Kumar, Vasilis Niarchos, and Andreas Stergiou (2026)  
+> [arXiv:2604.18686](https://arxiv.org/abs/2604.18686)
+
+Each script trains a small ensemble of networks to learn the four-point
 function G(z) of a scalar operator in a specific CFT by enforcing crossing
 symmetry as the only dynamical constraint, supplemented by one or
 more anchor conditions that fix the value of G at known reference points.
@@ -137,6 +146,35 @@ results_*/
 The figure shows all individual runs as thin lines, the ensemble mean with
 a ±1σ band, the exact or bootstrap reference, and the relative error of the
 mean normalised by |G(z)| + 1.
+
+
+## Citation
+
+If you use this code, please cite the papers
+
+```bibtex
+@article{Ghosh:2026jbw,
+    author = "Ghosh, Kausik and Kumar, Sidhaarth and Niarchos, Vasilis and Stergiou, Andreas",
+    title = "{Neural Networks Reveal a Universal Bias in Conformal Correlators}",
+    eprint = "2604.18673",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-th",
+    reportNumber = "ITCP-2026-4, CCTP-2026-4",
+    month = "4",
+    year = "2026"
+}
+
+@article{Ghosh:2026xnp,
+    author = "Ghosh, Kausik and Kumar, Sidhaarth and Niarchos, Vasilis and Stergiou, Andreas",
+    title = "{Neural Spectral Bias and Conformal Correlators I: Introduction and Applications}",
+    eprint = "2604.18686",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-th",
+    reportNumber = "ITCP-2026-5, CCTP-2-26-5",
+    month = "4",
+    year = "2026"
+}
+```
 
 ## License
 
