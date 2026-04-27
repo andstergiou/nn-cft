@@ -1,5 +1,11 @@
 # Neural Network Bootstrap for CFT Correlation Functions
 
+[![arXiv](https://img.shields.io/badge/arXiv-2604.18673-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.18673)
+[![arXiv](https://img.shields.io/badge/arXiv-2604.18686-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.18686)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)](https://pytorch.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This repository contains standalone Python scripts demonstrating a neural
 network approach to the reconstruction of conformal correlators as
 described in
