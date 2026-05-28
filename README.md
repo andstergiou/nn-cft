@@ -2,6 +2,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2604.18673-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.18673)
 [![arXiv](https://img.shields.io/badge/arXiv-2604.18686-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.18686)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20343436.svg)](https://doi.org/10.5281/zenodo.20343436)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
