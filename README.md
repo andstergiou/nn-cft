@@ -2,6 +2,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2604.18673-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.18673)
 [![arXiv](https://img.shields.io/badge/arXiv-2604.18686-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.18686)
+[![arXiv](https://img.shields.io/badge/arXiv-2607.xxxxx-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.xxxxx)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20343436.svg)](https://doi.org/10.5281/zenodo.20343436)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)](https://pytorch.org/)
@@ -17,6 +18,11 @@ described in
 > **Neural Spectral Bias and Conformal Correlators I: Introduction and Applications**  
 > Kausik Ghosh, Sidhaarth Kumar, Vasilis Niarchos, and Andreas Stergiou (2026)  
 > [arXiv:2604.18686](https://arxiv.org/abs/2604.18686)
+
+> **Neural Spectral Bias and Conformal Correlators II: Modular and Annulus Bootstrap**  
+> Kausik Ghosh, Sidhaarth Kumar, Vasilis Niarchos, and Andreas Stergiou (2026)  
+> [arXiv:2607.xxxxx](https://arxiv.org/abs/2607.xxxxx)
+
 
 Each script trains a small ensemble of networks to learn the four-point
 function G(z) of a scalar operator in a specific CFT by enforcing crossing
@@ -48,6 +54,7 @@ solution.
 | `run_3d_ising_sigma.py`    | 3D Ising sigma operator            | Conformal bootstrap sum      |
 | `run_3d_ising_epsilon.py`  | 3D Ising epsilon operator          | Conformal bootstrap sum      |
 | `run_ads2_contact.py`      | AdS2 contact diagram (phi^4, Delta_phi=1) | Exact closed-form formula    |
+| `run_torus_ade.py`         | Torus partition functions of A/D/E minimal models | Exact Virasoro character modular invariant sum |
 
 ## Installation
 
@@ -124,6 +131,24 @@ from a phi^4 contact interaction. The function is split as G(z) = H(z) + L(z),
 where L(z) = 2 z^2 (log(z) - 1) is a known leading contribution and H(z) is learned by the
 network. The exact answer is known analytically.
 
+### Torus Partition Functions (A/D/E Minimal Models)
+
+```bash
+# A-series minimal model M(4,5) (Ising model torus partition function)
+python run_torus_ade.py --series A --m 4
+
+# D-series minimal model M(6,7) with 5 runs
+python run_torus_ade.py --series D --m 6 --num-runs 5 --output-dir results_D6
+
+# E-series minimal model M(11,12) with 10 runs
+python run_torus_ade.py --series E --m 11 --num-runs 10
+```
+
+Learns the z-dependence of the prefactor of the torus partition function $Z(\tau(z))$ for $A$, $D$, and $E$ series Virasoro minimal models. Supported series/index pairs are:
+- **A-series**: Any $m \ge 3$
+- **D-series**: Any $m \ge 5$ with $p$ or $q$ even
+- **E-series**: $m \in \{11, 12\}$ ($E_6$), $m \in \{17, 18\}$ ($E_7$), and $m \in \{29, 30\}$ ($E_8$)
+
 ## Common Options
 
 | Flag | Default | Description |
@@ -139,7 +164,7 @@ network. The exact answer is known analytically.
 
 ## Outputs
 
-Each script writes results to the chosen output directory:
+Each script writes results to the chosen output directory. For the sphere and AdS2 scripts, the files are:
 
 ```
 results_*/
@@ -153,6 +178,20 @@ results_*/
 The figure shows all individual runs as thin lines, the ensemble mean with
 a ±1σ band, the exact or bootstrap reference, and the relative error of the
 mean normalised by |G(z)| + 1.
+
+For `run_torus_ade.py`, the files are:
+
+```
+results_torus_ade/
+├── metadata.json          # Configuration and reference values
+├── seed_000.json          # Per-run results (loss, epochs, predictions)
+├── seed_001.json
+├── ...
+├── example_seed.png       # Two-panel figure: example single seed vs exact + error
+└── spaghetti.png          # Two-panel figure: all seeds overlaid on exact + error
+```
+
+The `spaghetti.png` figure displays all individual seeds as thin, semi-transparent lines, along with the ensemble mean and a ±1σ band, overlaid on the exact reference. The right panel shows the scale-normalised percentage error.
 
 
 ## Citation
@@ -179,6 +218,17 @@ If you use this code, please cite the papers
     primaryClass = "hep-th",
     reportNumber = "ITCP-2026-5, CCTP-2-26-5",
     month = "4",
+    year = "2026"
+}
+
+@article{Ghosh:2026xnp,
+    author = "Ghosh, Kausik and Kumar, Sidhaarth and Niarchos, Vasilis and Stergiou, Andreas",
+    title = "{Neural Spectral Bias and Conformal Correlators I: Modular and Annulus Bootstrap}",
+    eprint = "2607.xxxxx",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-th",
+    reportNumber = "ITCP-2026-xx, CCTP-2-26-xx",
+    month = "7",
     year = "2026"
 }
 ```
