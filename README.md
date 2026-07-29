@@ -2,7 +2,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2604.18673-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.18673)
 [![arXiv](https://img.shields.io/badge/arXiv-2604.18686-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.18686)
-[![arXiv](https://img.shields.io/badge/arXiv-2607.xxxxx-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.xxxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-2607.24913-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.24913)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20343436.svg)](https://doi.org/10.5281/zenodo.20343436)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)](https://pytorch.org/)
@@ -21,7 +21,7 @@ described in
 
 > **Neural Spectral Bias and Conformal Correlators II: Modular and Annulus Bootstrap**  
 > Kausik Ghosh, Sidhaarth Kumar, Vasilis Niarchos, and Andreas Stergiou (2026)  
-> [arXiv:2607.xxxxx](https://arxiv.org/abs/2607.xxxxx)
+> [arXiv:2607.24913](https://arxiv.org/abs/2607.24913)
 
 
 Each script trains a small ensemble of networks to learn the four-point
@@ -221,13 +221,13 @@ If you use this code, please cite the papers
     year = "2026"
 }
 
-@article{Ghosh:2026xnp,
+@article{Ghosh:2026efw,
     author = "Ghosh, Kausik and Kumar, Sidhaarth and Niarchos, Vasilis and Stergiou, Andreas",
-    title = "{Neural Spectral Bias and Conformal Correlators I: Modular and Annulus Bootstrap}",
-    eprint = "2607.xxxxx",
+    title = "{Neural Spectral Bias and Conformal Correlators II: Modular and Annulus Bootstrap}",
+    eprint = "2607.24913",
     archivePrefix = "arXiv",
     primaryClass = "hep-th",
-    reportNumber = "ITCP-2026-xx, CCTP-2-26-xx",
+    reportNumber = "CCTP-2026-16, ITCP-IPP 2026/16",
     month = "7",
     year = "2026"
 }
